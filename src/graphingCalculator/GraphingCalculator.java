@@ -157,8 +157,11 @@ public class GraphingCalculator {
 //        calc.show(Math::cos);
 //        calc.show(Math::sin);
 
-        calc.show((x, n) -> Math.atan(x / Math.sin(n)));
-        calc.show((x, n) -> Math.atan(x / Math.sin(n)));
+//        calc.show((x, n) -> Math.atan(x / Math.sin(n)));
+//        calc.show((x, n) -> Math.atan(x / Math.sin(n)));
+
+
+        calc.show((Math::pow));
 
     }
 }
