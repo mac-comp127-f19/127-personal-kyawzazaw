@@ -148,9 +148,10 @@ public class GraphingCalculator {
 
     public static void main(String[] args) {
         GraphingCalculator calc = new GraphingCalculator(800, 600);
-        calc.show(x -> x * x);
+//        calc.show(x -> x * x);
         calc.show(x -> x * x * x);
         calc.show(x -> x);
+        calc.show(z -> z * z); // different parameter names work as well
 
     }
 }
