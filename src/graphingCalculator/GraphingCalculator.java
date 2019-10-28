@@ -153,5 +153,9 @@ public class GraphingCalculator {
         calc.show(x -> x);
         calc.show(z -> z * z); // different parameter names work as well
 
+        calc.show(x -> Math.cos(x));
+        calc.show(Math::cos);
+        calc.show(Math::sin);
+
     }
 }
