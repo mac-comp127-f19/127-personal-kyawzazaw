@@ -4,6 +4,7 @@ import comp127graphics.CanvasWindow;
 import comp127graphics.Line;
 import comp127graphics.Point;
 
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -163,5 +164,20 @@ public class GraphingCalculator {
 
         calc.show((Math::pow));
 
+
+        for (int n = 1; n < 12; n++) {
+            double base = n * 0.1 + 1.5;
+                double result = 0;
+                for (int i = 1; i < 20; i++) {
+                    result += Math.sin(x * Math.pow(base, i) - t * i * 3)
+                            / Math.pow(base, i);
+                }
+                return result;
+            });
+        }
+
+
     }
+
+
 }
