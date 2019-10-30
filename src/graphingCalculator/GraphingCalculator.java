@@ -36,7 +36,7 @@ public class GraphingCalculator {
 
         Button zoomOut = new Button("Zoom Out");
         zoomOut.onClick(() -> setScale(getScale() * 1.5));
-        zoomIn.setPosition(10, 10);
+        zoomIn.setPosition(zoomIn.getBounds().getMaxX(), 10);
         canvas.add(zoomOut);
 
         origin = canvas.getCenter();
@@ -176,16 +176,16 @@ public class GraphingCalculator {
         calc.show((Math::pow));
 
 
-        for (int n = 1; n < 12; n++) {
-            double base = n * 0.1 + 1.5;
-                double result = 0;
-                for (int i = 1; i < 20; i++) {
-                    result += Math.sin(x * Math.pow(base, i) - t * i * 3)
-                            / Math.pow(base, i);
-                }
-                return result;
-            });
-        }
+//        for (int n = 1; n < 12; n++) {
+//            double base = n * 0.1 + 1.5;
+//                double result = 0;
+//                for (int i = 1; i < 20; i++) {
+//                    result += Math.sin(x * Math.pow(base, i) - t * i * 3)
+//                            / Math.pow(base, i);
+//                }
+//                return result;
+//            });
+//        }
 
 
     }
