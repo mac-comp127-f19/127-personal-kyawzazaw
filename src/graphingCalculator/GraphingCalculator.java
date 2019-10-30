@@ -3,6 +3,7 @@ package graphingCalculator;
 import comp127graphics.CanvasWindow;
 import comp127graphics.Line;
 import comp127graphics.Point;
+import comp127graphics.ui.Button;
 
 
 import java.awt.*;
@@ -27,6 +28,16 @@ public class GraphingCalculator {
     public GraphingCalculator(int width, int height) {
         canvas = new CanvasWindow("Graphing Calculator", width, height);
         plots = new ArrayList<>();
+
+        Button zoomIn = new Button("Zoom In");
+        zoomIn.onClick(() -> setScale(getScale() * 1.5));
+        zoomIn.setPosition(10, 10);
+        canvas.add(zoomIn);
+
+        Button zoomOut = new Button("Zoom Out");
+        zoomOut.onClick(() -> setScale(getScale() * 1.5));
+        zoomIn.setPosition(10, 10);
+        canvas.add(zoomOut);
 
         origin = canvas.getCenter();
         scale = Math.min(width, height) / 4.0;
